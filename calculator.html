@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator - RECYCLY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Material Weight Calculator</h1>
+    <p>Estimate your contribution before you post.</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="process.html">Process</a>
+    <a href="calculator.html">Calculator</a>
+    <a href="market.html">Market</a>
+    <a href="tutorials.html">Tutorials</a>
+    <a href="transparency.html">Transparency</a>
+    <a href="about.html">About</a>
+</nav>
+
+<div class="container">
+    <div class="card">
+        <h3>PET Bottle Estimator</h3>
+        <p>Standard 500ml PET bottles generally weigh around 0.025 kg each. Enter the number of clean PET bottles you have collected to estimate your total raw material weight.</p>
+        
+        <label for="bottles"><strong>Enter number of PET bottles:</strong></label><br><br>
+        <input id="bottles" type="number" placeholder="e.g. 20" style="padding: 8px; width: 60%;">
+        <button onclick="calc()" style="padding: 8px 16px;">Calculate</button>
+
+        <div style="margin-top: 20px; padding: 15px; background: #eef8f1; border-radius: 8px;">
+            <h4 id="result">Result will appear here.</h4>
+            <p id="carbon-result" style="color: #2e7d32; font-weight: bold;"></p>
+        </div>
+    </div>
+</div>
+
+<script>
+function calc() {
+    let bottles = document.getElementById("bottles").value;
+    let weight = bottles * 0.025; // approx kg per bottle
+    document.getElementById("result").innerText =
+        bottles + " bottles ≈ " + weight.toFixed(2) + " kg PET";
+}
+</script>
+
+</body>
+</html>
