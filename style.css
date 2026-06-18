@@ -1,0 +1,154 @@
+/* 🌱 GLOBAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+/* 🌿 BACKGROUND */
+body {
+    background: linear-gradient(135deg, #e8f5e9, #f1fff3);
+    color: #1b2e1b;
+    min-height: 100vh;
+    animation: fadeIn 0.8s ease-in;
+}
+
+/* ✨ HEADER */
+header {
+    background: linear-gradient(90deg, #1b5e20, #2e7d32);
+    color: white;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    animation: slideDown 0.8s ease;
+}
+
+/* 🌐 NAVIGATION */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    background: #2e7d32;
+    padding: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+nav a:hover {
+    background: white;
+    color: #2e7d32;
+    transform: scale(1.1);
+}
+
+/* 📦 MAIN CONTAINER */
+.container {
+    padding: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* 🧾 CARD DESIGN */
+.card {
+    background: white;
+    padding: 18px;
+    margin: 15px 0;
+    border-radius: 12px;
+    border-left: 6px solid #2e7d32;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+    animation: fadeUp 0.6s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* 🔘 BUTTONS */
+button {
+    padding: 10px 14px;
+    background: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 8px;
+}
+
+button:hover {
+    background: #1b5e20;
+    transform: scale(1.05);
+}
+
+/* ⌨️ INPUTS */
+input {
+    padding: 10px;
+    width: 220px;
+    border: 2px solid #c8e6c9;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #2e7d32;
+    box-shadow: 0 0 8px rgba(46,125,50,0.4);
+}
+
+/* 📱 RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    .container {
+        padding: 12px;
+    }
+}
+
+/* 🌟 ANIMATIONS */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
