@@ -5,6 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - RECYCLY</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Profile photo styles */
+        .leadership-team ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .team-member {
+            margin: 20px;
+            text-align: center;
+            flex: 1 1 300px;
+            max-width: 300px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #4CAF50;
+            margin-bottom: 15px;
+        }
+
+        .team-member b {
+            display: block;
+            margin-top: 10px;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .team-member-title {
+            color: #777;
+            font-style: italic;
+            margin-bottom: 10px;
+            display: block;
+        }
+    </style>
 </head>
 <body>
 
@@ -30,12 +75,27 @@
         <p><strong>Vision:</strong> A world where household waste is viewed as a resource, empowering local communities through skill-building and green entrepreneurship.</p>
     </div>
 
-    <div class="card">
+    <div class="card leadership-team">
         <h2>Leadership Team</h2>
         <ul>
-            <li><b>CEO:</b> JEZER ASRIEL PALKING PAGINDAS - Leading strategic growth and partnerships.</li>
-            <li><b>Owner:</b> APIDOS FELIPE - Overseeing business operations and community outreach.</li>
-            <li><b>Founder:</b> RIDEN PEDRO - The visionary behind the recycly platform architecture.</li>
+            <li class="team-member">
+                <img src="ph3.jpg" alt="Jezer Asriel Palking Pagindas CEO Profile" class="profile-pic">
+                <b>JEZER ASRIEL PALKING PAGINDAS</b>
+                <span class="team-member-title">CEO</span>
+                Leading strategic growth and partnerships.
+            </li>
+            <li class="team-member">
+                <img src="ph2.png" alt="Apidos Felipe Owner Profile" class="profile-pic">
+                <b>APIDOS FELIPE</b>
+                <span class="team-member-title">Owner</span>
+                Overseeing business operations and community outreach.
+            </li>
+            <li class="team-member">
+                <img src="..//ph1.png" alt="Placeholder silhouette Founder Profile" class="profile-pic">
+                <b>RIDEN PEDRO</b>
+                <span class="team-member-title">Founder</span>
+                The visionary behind the recycly platform architecture.
+            </li>
         </ul>
     </div>
 
